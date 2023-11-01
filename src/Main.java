@@ -5,7 +5,6 @@ public class Main {
     public static void main(String [] args) {
         ArrayList<Koeretoej>koretojer = new ArrayList<>();
 
-
         PersonVogn personVogn1 = new PersonVogn(120.0, "2230db", 180, 2.0, 90);
         LastBil lastbil1 = new LastBil(500, "4530db", 50000,2);
         Bus bus1 = new Bus(5,"22db222",5,2);
