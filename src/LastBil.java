@@ -6,8 +6,10 @@ public class LastBil extends Koeretoej{     //sub class
     public LastBil() {
     }
 
-    public LastBil(int hesteKraefter, double lastKapacitet) {
-
+    public LastBil(double vaegtafgift, String registreringsNr, int hesteKraefter, double lastKapacitet) {
+        super(vaegtafgift, registreringsNr);
+        this.hesteKraefter = hesteKraefter;
+        this.lastKapacitet = lastKapacitet;
     }
 
     public int getHesteKraefter() {
@@ -26,7 +28,11 @@ public class LastBil extends Koeretoej{     //sub class
         this.lastKapacitet = lastKapacitet;
     }
 
-    public void udskrivLastBil() {
-
+    public void udskriv() {
+        super.udskriv();
+        System.out.println("Hestekraefter: " + this.hesteKraefter);
+        System.out.println("LastKapacitet:" + this.lastKapacitet);
     }
+
+
 }

@@ -1,12 +1,13 @@
 public class PersonVogn extends Koeretoej{      //sub class
     private double hastighed;
-    private int motorStr;
+    private double motorStr;
     private int hesteKraefter;
 
-    public PersonVogn() {
-    }
-
-    public PersonVogn(double hastighed, int motorStr, int hesteKraefter){
+    public PersonVogn(double vaegtafgift, String registreringsNr, double hastighed, double motorStr, int hesteKraefter){
+        super(vaegtafgift, registreringsNr);
+        this.hastighed = hastighed;
+        this.motorStr = motorStr;
+        this.hesteKraefter = hesteKraefter;
 
     }
 
@@ -18,12 +19,12 @@ public class PersonVogn extends Koeretoej{      //sub class
         this.hastighed = hastighed;
     }
 
-    public int getMotorStr() {
+    public double getMotorStr() {
         return motorStr;
     }
 
-    public void setMotorStr(int motorStr) {
-        this.motorStr = motorStr;
+    public void setMotorStr(double motorStr) {
+       this.motorStr = motorStr;
     }
 
     public int getHesteKraefter() {
@@ -34,7 +35,13 @@ public class PersonVogn extends Koeretoej{      //sub class
         this.hesteKraefter = hesteKraefter;
     }
 
-    public void udskrivPersonVogn() {
-        System.out.println();
+
+    public void udskriv() {
+        super.udskriv();
+        System.out.println("Hastighed: " + this.hastighed);
+        System.out.println("motorStr: " + this.motorStr);
+        System.out.println("hestekraefter: " + this.hesteKraefter);
     }
+
+
 }

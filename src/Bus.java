@@ -2,11 +2,10 @@ public class Bus extends Koeretoej{         //sub class
     private int antalPassagerer;
     private int antalDoere;
 
-    public Bus () {
-
-    }
-    public Bus (int antalPassagerer, int antalDoere) {
-
+    public Bus (double vaegtafgift, String registreringsNr, int antalPassagerer, int antalDoere) {
+        super(vaegtafgift, registreringsNr);
+        this.antalPassagerer = antalPassagerer;
+        this.antalDoere = antalDoere;
     }
     public int getAntalPassagerer() {
         return antalPassagerer;
@@ -24,7 +23,8 @@ public class Bus extends Koeretoej{         //sub class
         this.antalDoere = antalDoere;
     }
 
-    public void udskrivBus() {
-
+    public void udskriv() {
+        super.udskriv();
+        System.out.println();
     }
 }
